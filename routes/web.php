@@ -28,11 +28,18 @@ Route::get('/', function () {
 
 Route::get('coba','CobaController@test');
 Route::get('coba2/{id}','CobaController@test2');
+Route::get('coba3/{nama}','CobaController@test10');
 Route::get('tessst','CobaController@index');
+
+
 Route::get('buah','CobaController@coba1');
 Route::get('nama','CobaController@coba2');
 Route::get('test/{data}','CobaController@bin');
 
+
+
+
+Route::resource('post','PostController');
 
 
 

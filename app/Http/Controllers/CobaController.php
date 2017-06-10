@@ -40,11 +40,15 @@ class CobaController extends Controller
     {
     	$koplak =['binatang' =>['jerapah','gajah','unta','monyet','ayam'],
     			   'kendaraan'=>['motor','mobil','ojeg','bis','kereta api'],
-    			   'laptop'=>['acer','lenovo','hp','asus']];
+    			   'laptop'=>['acer','lenovo','hp','asus','samsung']];
     	$ahaha =$koplak[$data];
     	return view('latihan',compact('ahaha'));
+    }
 
-
+    public function test10($nama)
+    {
+        $a = Coba::where('nama','like','%'.$nama.'%')->orwhere('jurusan','like','%'.$nama.'%')->get();
+        return $a;
     }
 
     }
