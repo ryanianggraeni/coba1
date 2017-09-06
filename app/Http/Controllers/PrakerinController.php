@@ -70,4 +70,10 @@ class PrakerinController extends Controller
     	return view('welcome',compact('a'));
     }
 
+    public function test()
+    {
+        $a = Coba::all();
+        return $a;
+    }
+
 }
